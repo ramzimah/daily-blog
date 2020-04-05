@@ -2,9 +2,16 @@
 <%- include('partials/header.ejs'); -%>
 
 <h1>Compose:</h1>
-<form action="" method="post">
-    <input type="text" name="pub" id="" autocomplete="off">
-    <button type="submit" >publish</button>
+<form action="/compose" method="post">
+
+        <div class="form-group">
+          <label >Title</label>
+          <input type="text" class="form-control" name="postTitle"  placeholder="Enter a title" autocomplete="off" required autofocus>
+    
+          <label>post</label>
+          <textarea  class="form-control" name="postBody" rows="5" cols="30" placeholder="tap ur post"></textarea>
+        <button type="submit" class="btn btn-primary publish">Publish</button>
+      </div>
 </form>
 
 <%- include('partials/footer.ejs'); -%>
